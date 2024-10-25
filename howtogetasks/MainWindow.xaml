@@ -1,0 +1,32 @@
+﻿<Window x:Class="howtogetasks.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:howtogetasks"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <ScrollViewer>
+    <StackPanel>
+        <Label Content="а и б сидели на трубе, а упала, б пропала, что осталось на трубе? "/>
+        <TextBox Text="{Binding answer.Answer1}"/>
+        <Button Content="отправить ответ" Click="SendAnswer"/>
+        <StackPanel Margin="0 30 0 0">
+            <Label Content="угадайка"/>
+            <Label Content="введите комментарий"/>
+            <TextBox Text="{Binding ResultClass.text}"/>
+            <Label Content="введите х"/>
+            <TextBox Text="{Binding ResultClass.x}"/>
+            <Label Content="введите у"/>
+            <TextBox Text="{Binding ResultClass.y}"/>
+            <Button Content="отправить ответ" Click="GuessComment"/>
+        </StackPanel>
+        <StackPanel Margin="0 30 0 0">
+            <Label Content="ура"/>
+            <TextBox Text="{Binding Result.Result}"/>
+            <Button Content="отправить ответ" Click="ThisEndsNow"/>
+        </StackPanel>
+        <Image Source="{Binding LastAnswer.Image}"/>
+    </StackPanel>
+    </ScrollViewer>
+</Window>
